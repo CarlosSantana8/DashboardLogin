@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/loginStyle.css">
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="buttonsForm">
+            <div class="btnColor"></div>
+            <button id="btnSignin">Sing in</button>
+            <button id="btnSignup">Sign up</button>
+        </div>
+
+        <form id="signin">
+            <input class="signinEmail" type="email" placeholder="Digite seu Email" required  />
+            <i class=" fas fa-envelope iEmail"></i>
+            <input class="signinPassword" type="password" placeholder="Digite sua senha" required  />
+            <i class=" fas fa-lock iPassword"></i>
+            <div class="divCheck">  
+                <input type="checkbox" />
+                <span>Lembrar Senha</span>
+            </div>
+            <button class="signinSubmitBtn" type="submit">Sign in</button>
+        </form>
+
+        <form id="signup">
+            <input class="signupEmail" type="email" placeholder="Digite seu Email" required  />
+            <i class=" fas fa-envelope iEmail"></i>
+            <input class="signupPassword" type="password" placeholder="Digite sua senha" required  />
+            <i class=" fas fa-lock iPassword"></i>
+            <input class="signupPasswordConfirm" type="password" placeholder="Confirme sua senha" required  />
+            <i class=" fas fa-lock iPassword2"></i>
+            <div class="divCheck">  
+                <input type="checkbox" required/>
+                <span>Termos</span>
+            </div>
+            <button id="signupSubmitBtn" type="submit">Sign up</button>
+        </form>
+    </div>
+
+
+    <script src="assets/js/loginScript.js"></script>
+</body>
+</html>

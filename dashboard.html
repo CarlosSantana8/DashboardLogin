@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dashboardStyle.css">
+    <title>Dashboard</title>
+</head>
+<body onload="setMood('meh')">
+
+    <div class="container">
+        <div class="sidebar-left">
+            <div class="profile">
+                <div class="profile-image" onclick="openFileExplorer()" onmouseover="showIndicator()" onmouseout="hideIndicator()">
+                    <img id="profile-img" src="https://via.placeholder.com/200" alt="Imagem do Funcionário">
+                    <span id="click-indicator" class="click-indicator">Clique para adicionar imagem</span>
+                </div>
+                <input type="file" id="file-input" style="display: none;" accept="image/*" onchange="updateProfileImage(event)">
+                                                
+                <div class="profile-info">
+                    <h2 class="profile-name">Olá, <span id="Name" contenteditable="true" data-maxlength="10" data-original-text="nome" oninput="limitChars(event)" onblur="checkRequired(event)">nome</span>!</h2>
+                    <p class="email" id="profile-email">profile@email.com</p>
+                    <br>
+                    <p class="profile-role" id="profile-role">Função</p>
+                    <br>
+                    <div class="mood">
+                        <p>Como você está se sentindo hoje?</p>
+                        <div class="emojis">
+                            <button class="emoji" data-mood="smile" onclick="setMood('smile')">&#x1F604;</button>
+                            <button class="emoji" data-mood="meh" onclick="setMood('meh')">&#x1F610;</button>
+                            <button class="emoji" data-mood="frown" onclick="setMood('frown')">&#x1F641;</button>
+                            <div class="btnColor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="central-content">
+            <div class="demands">
+                <h3>Demandas</h3>
+                <table id="demand-table">
+                    <thead>
+                        <tr>
+                            <th>Demanda</th>
+                            <th>Conclusão</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div>
+                    <input type="text" id="task-input" placeholder="Digite nova uma demanda">
+                    <button class="add-demand-button" onclick="addDemand()">Adicionar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sidebar-right">
+
+        </div>    
+    </div>
+
+    <script src="assets/js/dashboardScript.js"></script>
+
+</body>
+</html>
